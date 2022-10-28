@@ -1,9 +1,8 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import Button from 'react-bootstrap/Button';
-import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { Link, NavLink, useNavigate, Navigate } from 'react-router-dom';
 
 function NavBar() {
     const navigate = useNavigate();
@@ -21,6 +20,7 @@ function NavBar() {
             <Nav.Link as={NavLink} to="/About/3">About/id</Nav.Link>
             <Nav.Link as={NavLink} to="/Person">Person</Nav.Link>
             <Nav.Link as={NavLink} to="/Contact">Contact</Nav.Link>
+            <Nav.Link as={NavLink} to="/LogOut">Log Out</Nav.Link>
                 <Button onClick={()=>navigate("/", {state:"hak"}) } >navigate kullanımı</Button>
           
           </Nav>

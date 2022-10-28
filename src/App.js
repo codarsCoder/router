@@ -2,7 +2,7 @@ import  Nav  from './Components/Nav';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Home from './Pages/Home';
 import Person from './Pages/Person';
 import PersonDetail from './Pages/PersonDetail';
@@ -24,7 +24,7 @@ function App() {
         <Route path="" element= {<PersonDetail />}/>
       </Route>
       <Route path='/Contact' element= {<Contact />} />
-
+      <Route path="/logout" element={<Navigate to={"/login"} />} />
     </Routes>
     <Footer />
 </BrowserRouter>
